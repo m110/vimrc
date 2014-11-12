@@ -154,7 +154,7 @@ nnoremap <leader>p "*p
 nnoremap <leader>/ /<C-r>*<CR>
 
 " Open config file
-nnoremap <leader>e :e $MYVIMRC<CR>
+nnoremap <leader>v :e $MYVIMRC<CR>
 
 " Toggle list
 nnoremap <silent> <leader>l :set list!<CR>
@@ -230,7 +230,6 @@ cnoremap <C-e> <End>
 cmap w!! w !sudo tee % >/dev/null<CR>
 
 " Buffers
-nnoremap <silent> <leader>b :buffers<CR>:buffer<Space>
 nnoremap <leader>g :e#<CR>
 nnoremap <leader>1 :1b<CR>
 nnoremap <leader>2 :2b<CR>
