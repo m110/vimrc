@@ -23,10 +23,10 @@ Bundle 'tomasr/molokai'
 Bundle 'sjl/badwolf'
 Bundle 'kien/ctrlp.vim'
 Bundle 'AndrewRadev/sideways.vim'
-Bundle 'ervandew/supertab'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'vim-scripts/django.vim'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 
@@ -300,6 +300,7 @@ map <leader>f :call ShowFuncName() <CR>
 
 " jedi-vim
 let g:jedi#goto_definitions_command = "<leader>q"
+let g:jedi#completions_enabled = 0
 
 " Syntastic
 let g:syntastic_python_checkers = ['pylint']
