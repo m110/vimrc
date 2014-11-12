@@ -301,6 +301,7 @@ map <leader>f :call ShowFuncName() <CR>
 " jedi-vim
 let g:jedi#goto_definitions_command = "<leader>q"
 let g:jedi#completions_enabled = 0
+let g:jedi#use_tabs_not_buffers = 0
 
 " Syntastic
 let g:syntastic_python_checkers = ['pylint']
