@@ -6,28 +6,29 @@ set nocompatible
 filetype off
 
 " Load vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'vim-scripts/CSApprox'
-Bundle 'vim-scripts/ctags.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'b3niup/numbers.vim'
-Bundle 'spiiph/vim-space'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tomasr/molokai'
-Bundle 'sjl/badwolf'
-Bundle 'kien/ctrlp.vim'
-Bundle 'AndrewRadev/sideways.vim'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'bkad/CamelCaseMotion'
-Bundle 'vim-scripts/django.vim'
-Bundle 'Valloric/YouCompleteMe'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'vim-scripts/CSApprox'
+Plugin 'vim-scripts/ctags.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'b3niup/numbers.vim'
+Plugin 'spiiph/vim-space'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tomasr/molokai'
+Plugin 'sjl/badwolf'
+Plugin 'kien/ctrlp.vim'
+Plugin 'AndrewRadev/sideways.vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'vim-scripts/django.vim'
+Plugin 'Valloric/YouCompleteMe'
 
+call vundle#end()
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""
@@ -140,15 +141,11 @@ nnoremap <leader>s :NERDTreeFind<CR>
 " [I] Literal Tab character
 imap <S-Tab> <C-V><Tab>
 
-" [V] Copy to system clipboard
-vnoremap <C-c> "+y
-
 " [V] Reverse word
 vnoremap <leader>rv c<C-O>:set revins<CR><C-R>"<Esc>:set norevins<CR>
 
-" [N] Yank current word / put from system clipboard
-nnoremap <leader>y viw"*y
-nnoremap <leader>p "*p
+" [V] Copy to system clipboard
+vnoremap <C-c> "+y
 
 " Search for text in clipboard
 nnoremap <leader>/ /<C-r>*<CR>
@@ -305,9 +302,6 @@ let g:jedi#use_tabs_not_buffers = 0
 
 " Syntastic
 let g:syntastic_python_checkers = ['pylint']
-
-" SuperTab
-let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " CamelCaseMotion
 map <leader>w <Plug>CamelCaseMotion_w
